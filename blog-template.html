@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Blog Post Title - AI Apps &amp; Games Blog</title>
+  <meta name="description" content="A reusable blog article layout detailing Kotlin, Jetpack Compose, and AI integration strategies for modern Android developments.">
+  <link rel="canonical" href="https://aiappsandgames.github.io/blog-template.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://aiappsandgames.github.io/blog-template.html">
+  <meta property="og:title" content="Blog Post Title - AI Apps &amp; Games Blog">
+  <meta property="og:description" content="A reusable blog article layout detailing Kotlin, Jetpack Compose, and AI integration strategies for modern Android developments.">
+  <meta property="og:image" content="https://aiappsandgames.github.io/assets/images/brand/og-image.png">
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+  
+  <style>
+    .blog-content h2 {
+      font-size: 1.75rem;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+    .blog-content p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+      color: var(--text-secondary);
+    }
+    .blog-content blockquote {
+      border-left: 4px solid var(--accent);
+      padding: 1rem 1.5rem;
+      background-color: var(--surface);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      margin: 2rem 0;
+      font-style: italic;
+    }
+    .blog-content pre {
+      background-color: #121214;
+      border: 1px solid var(--surface-border);
+      padding: 1.5rem;
+      border-radius: var(--radius-md);
+      overflow-x: auto;
+      margin: 2rem 0;
+    }
+    .blog-content code {
+      font-family: monospace;
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container">
+      <a href="index.html" class="logo" aria-label="AI Apps and Games Home">
+        <img src="assets/images/brand/logo.jpg" alt="AI Apps & Games Logo" class="logo-img" style="height: 32px; width: 32px; border-radius: var(--radius-sm); object-fit: contain; margin-right: 0.5rem;">
+        <span>AI Apps & Games</span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="apps.html" class="nav-link">Apps</a>
+        <a href="about.html" class="nav-link">About & Hire</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="support.html" class="nav-link">Support</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn-icon theme-toggle" id="theme-toggle" aria-label="Toggle light or dark theme"></button>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Open Mobile Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Blog Article Layout -->
+  <article class="section" style="padding-top: 8rem; max-width: 800px;">
+    <div class="reveal">
+      
+      <!-- Meta Information -->
+      <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem; font-size: 0.9rem; flex-wrap: wrap;">
+        <span class="app-card-category" style="margin-bottom: 0;">Android Engineering</span>
+        <span style="color: var(--text-muted);">Published July 15, 2026</span>
+        <span style="color: var(--text-muted);">•</span>
+        <span style="color: var(--text-muted);">5 min read</span>
+      </div>
+
+      <h1 style="font-size: clamp(2rem, 1rem + 4vw, 3rem); font-weight: 800; line-height: 1.2; margin-bottom: 2rem; letter-spacing: -0.03em;">
+        Implementing Material Design 3 and Glassmorphism Natively in Jetpack Compose
+      </h1>
+
+      <!-- Author Card -->
+      <div style="display: flex; align-items: center; gap: 1rem; border-top: 1px solid var(--surface-border); border-bottom: 1px solid var(--surface-border); padding: 1rem 0; margin-bottom: 2.5rem;">
+        <div style="width: 44px; height: 44px; border-radius: var(--radius-full); background: var(--accent-gradient); display: flex; align-items: center; justify-content: center; font-weight: 700; color: white;">KR</div>
+        <div>
+          <div style="font-weight: 600; font-size: 0.95rem;">Kishor Ramani</div>
+          <div style="font-size: 0.8rem; color: var(--text-muted);">Senior Android Engineer &amp; Designer</div>
+        </div>
+      </div>
+
+      <!-- Main Article Content -->
+      <div class="blog-content">
+        <p>
+          Material Design 3 (M3) represents a monumental leap forward in personalizing user interfaces on Android. Combined with custom glassmorphic rendering layers, we can build stunning mobile screens that feel modern, premium, and fast.
+        </p>
+
+        <blockquote>
+          "Aesthetics should never replace performance. Our goal is to achieve visual excellence while maintaining 60fps/120fps frame rendering cycles."
+        </blockquote>
+
+        <h2>The Jetpack Compose Implementation</h2>
+        <p>
+          To draw glassmorphism natively in Jetpack Compose without lag, we leverage the custom <code>Modifier.graphicsLayer</code> layer combined with RenderEffect API available in Android 12 (API 31) and higher:
+        </p>
+
+        <pre><code>@Composable
+fun GlassmorphicCard(
+    modifier: Modifier = Modifier,
+    content: @Composable () -> Unit
+) {
+    Box(
+        modifier = modifier
+            .graphicsLayer {
+                // Apply render blur on Android 12+
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+                    renderEffect = RenderEffect.createBlurEffect(
+                        12f, 12f, Shader.TileMode.CLAMP
+                    ).asComposeRenderEffect()
+                }
+            }
+            .background(Color.White.copy(alpha = 0.08f))
+            .border(1.dp, Color.White.copy(alpha = 0.12f), RoundedCornerShape(16.dp))
+    ) {
+        content()
+    }
+}</code></pre>
+
+        <h2>Optimizing for Older Devices</h2>
+        <p>
+          For smartphones running Android versions prior to API 31, we gracefully degrade the layout to standard translucent solid background surfaces rather than loading expensive manual bitmap blurs that exhaust CPU cores.
+        </p>
+      </div>
+
+    </div>
+  </article>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo-col">
+        <a href="index.html" class="logo" aria-label="AI Apps and Games footer home link">
+          <img src="assets/images/brand/logo.jpg" alt="AI Apps & Games Logo" class="logo-img" style="height: 32px; width: 32px; border-radius: var(--radius-sm); object-fit: contain; margin-right: 0.5rem;">
+          <span>AI Apps & Games</span>
+        </a>
+        <p class="footer-logo-desc">High-quality native Android experiences combining modern frameworks with cutting-edge AI architectures.</p>
+      </div>
+      <div>
+        <h3 class="footer-heading">Support & Legal</h3>
+        <ul class="footer-links">
+          <li><a href="support.html" class="footer-link">Contact Support</a></li>
+          <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
+          <li><a href="terms.html" class="footer-link">Terms & Conditions</a></li>
+          <li><a href="data-safety.html" class="footer-link">Data Safety Details</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 AI Apps & Games. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

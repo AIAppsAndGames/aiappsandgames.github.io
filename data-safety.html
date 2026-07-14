@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Safety Disclosures - AI Apps &amp; Games</title>
+  <meta name="description" content="Official Google Play Console Data Safety disclosure sheet. Tracing our collection, encryption, and deletion policies.">
+  <link rel="canonical" href="https://aiappsandgames.github.io/data-safety.html">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container">
+      <a href="index.html" class="logo" aria-label="AI Apps and Games Home">
+        <img src="assets/images/brand/logo.jpg" alt="AI Apps & Games Logo" class="logo-img" style="height: 32px; width: 32px; border-radius: var(--radius-sm); object-fit: contain; margin-right: 0.5rem;">
+        <span>AI Apps & Games</span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="apps.html" class="nav-link">Apps</a>
+        <a href="about.html" class="nav-link">About & Hire</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="support.html" class="nav-link">Support</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn-icon theme-toggle" id="theme-toggle" aria-label="Toggle light or dark theme"></button>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Open Mobile Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content -->
+  <section class="section" style="padding-top: 8rem; max-width: 800px;">
+    <div class="reveal">
+      <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">Data Safety Disclosures</h1>
+      <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 2.5rem;">Play Store Policy Compliant</p>
+
+      <div style="display: flex; flex-direction: column; gap: 2rem; line-height: 1.8;">
+        <p style="color: var(--text-secondary);">
+          Google Play requires developers to disclose data gathering policies on a dedicated safety sheet. Below is the official breakdown for our applications:
+        </p>
+
+        <!-- Safety Table -->
+        <div class="card" style="padding: 0; overflow: hidden; border-radius: var(--radius-md);">
+          <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.95rem;">
+            <thead>
+              <tr style="background-color: var(--surface-hover); border-bottom: 1px solid var(--surface-border);">
+                <th style="padding: 1rem;">Data Category</th>
+                <th style="padding: 1rem;">Collected?</th>
+                <th style="padding: 1rem;">Encrypted in Transit?</th>
+                <th style="padding: 1rem;">Purpose</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--surface-border);">
+                <td style="padding: 1rem; font-weight: 600;">Personal Identifiers</td>
+                <td style="padding: 1rem; color: var(--error);">No</td>
+                <td style="padding: 1rem;">N/A</td>
+                <td style="padding: 1rem; color: var(--text-muted);">None</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--surface-border);">
+                <td style="padding: 1rem; font-weight: 600;">Location Metrics</td>
+                <td style="padding: 1rem; color: var(--error);">No</td>
+                <td style="padding: 1rem;">N/A</td>
+                <td style="padding: 1rem; color: var(--text-muted);">None</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--surface-border);">
+                <td style="padding: 1rem; font-weight: 600;">Financial Logs</td>
+                <td style="padding: 1rem; color: var(--error);">No</td>
+                <td style="padding: 1rem;">N/A</td>
+                <td style="padding: 1rem; color: var(--text-muted);">None (Local computation only)</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--surface-border);">
+                <td style="padding: 1rem; font-weight: 600;">App Prompts (Text)</td>
+                <td style="padding: 1rem; color: var(--success);">Yes (AI tools only)</td>
+                <td style="padding: 1rem; color: var(--success);">Yes (HTTPS)</td>
+                <td style="padding: 1rem;">Query cloud AI APIs to generate art/videos</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div>
+          <h2 style="font-size: 1.5rem; margin-bottom: 0.75rem; color: var(--text);">How to Request Data Deletion</h2>
+          <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+            Because our apps run offline-first, uninstalling the application instantly purges all databases, cached records, and images from your smartphone memory.
+          </p>
+          <p style="color: var(--text-secondary);">
+            To confirm deletion of any stored prompt queries from AI API caches, send us an email at <a href="mailto:kishorrramani@gmail.com" style="color: var(--accent); text-decoration: underline;">kishorrramani@gmail.com</a> or create a ticket directly on our <a href="support.html" style="color: var(--accent); text-decoration: underline;">Support Page</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo-col">
+        <a href="index.html" class="logo" aria-label="AI Apps and Games footer home link">
+          <img src="assets/images/brand/logo.jpg" alt="AI Apps & Games Logo" class="logo-img" style="height: 32px; width: 32px; border-radius: var(--radius-sm); object-fit: contain; margin-right: 0.5rem;">
+          <span>AI Apps & Games</span>
+        </a>
+        <p class="footer-logo-desc">High-quality native Android experiences combining modern frameworks with cutting-edge AI architectures.</p>
+      </div>
+      <div>
+        <h3 class="footer-heading">Support & Legal</h3>
+        <ul class="footer-links">
+          <li><a href="support.html" class="footer-link">Contact Support</a></li>
+          <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
+          <li><a href="terms.html" class="footer-link">Terms & Conditions</a></li>
+          <li><a href="data-safety.html" class="footer-link">Data Safety Details</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 AI Apps & Games. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

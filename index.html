@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary SEO Meta Tags -->
+  <title>AI Apps & Games - Smart Android Apps, AI Tools & Mobile Games</title>
+  <meta name="description" content="Official portfolio and developer website of AI Apps & Games. Discover our native Android applications, AI-powered tools, productivity aids, and responsive mobile games.">
+  <meta name="keywords" content="Android developer, Android portfolio, Kotlin, Jetpack Compose, Gemini AI, Mobile Games, productivity apps, PWA, play store apps">
+  <link rel="canonical" href="https://aiappsandgames.github.io/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aiappsandgames.github.io/">
+  <meta property="og:title" content="AI Apps & Games - Smart Android Apps, AI Tools & Mobile Games">
+  <meta property="og:description" content="Official portfolio and developer website of AI Apps & Games. Discover our native Android applications, AI-powered tools, productivity aids, and responsive mobile games.">
+  <meta property="og:image" content="https://aiappsandgames.github.io/assets/images/brand/og-image.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://aiappsandgames.github.io/">
+  <meta property="twitter:title" content="AI Apps & Games - Smart Android Apps, AI Tools & Mobile Games">
+  <meta property="twitter:description" content="Official portfolio and developer website of AI Apps & Games. Discover our native Android applications, AI-powered tools, productivity aids, and responsive mobile games.">
+  <meta property="twitter:image" content="https://aiappsandgames.github.io/assets/images/brand/og-image.png">
+
+  <!-- Favicon & PWA -->
+  <link rel="icon" type="image/jpeg" href="assets/images/brand/logo.jpg">
+  
+  <link rel="apple-touch-icon" href="assets/images/brand/logo.jpg">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#6366f1">
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "AI Apps & Games",
+    "url": "https://aiappsandgames.github.io/",
+    "logo": "https://aiappsandgames.github.io/assets/images/brand/logo.png",
+    "sameAs": [
+      "https://play.google.com/store/apps/dev?id=6047869602587961523",
+      "https://github.com/kishorramani"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Header / Navigation -->
+  <header class="header">
+    <div class="header-container">
+      <a href="index.html" class="logo" aria-label="AI Apps and Games Home">
+        <img src="assets/images/brand/logo.jpg" alt="AI Apps & Games Logo" class="logo-img" style="height: 32px; width: 32px; border-radius: var(--radius-sm); object-fit: contain; margin-right: 0.5rem;">
+        <span>AI Apps & Games</span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="apps.html" class="nav-link">Apps</a>
+        <a href="about.html" class="nav-link">About & Hire</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="support.html" class="nav-link">Support</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Theme Toggle -->
+        <button class="btn-icon theme-toggle" id="theme-toggle" aria-label="Toggle light or dark theme">
+          <svg class="dark-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="light-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="display: none;">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <!-- PWA Install -->
+        <button class="btn btn-secondary" id="pwa-install" style="display: none;" aria-label="Install web application offline">Install App</button>
+
+        <!-- Hamburger Menu for mobile -->
+        <button class="menu-toggle" id="menu-toggle" aria-label="Open Mobile Menu" aria-expanded="false" aria-controls="nav-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" aria-labelledby="hero-heading">
+    <div class="hero-bg-glow" aria-hidden="true"></div>
+    <div class="hero-badge reveal">
+      <span></span>
+      Latest Release: ArrowFlow is Live!
+    </div>
+    <h1 class="hero-title reveal" id="hero-heading">
+      Building Beautiful <span>Android Apps</span>,<br>AI Tools & Mobile Games.
+    </h1>
+    <p class="hero-subtitle reveal">
+      Native Android experiences powered by Kotlin, Jetpack Compose, Material Design 3, and advanced Google Gemini AI capabilities.
+    </p>
+    <div class="hero-buttons reveal">
+      <a href="apps.html" class="btn btn-primary">Explore Our Apps</a>
+      <a href="about.html#hire-me" class="btn btn-secondary">Hire Me as Developer</a>
+    </div>
+
+  </section>
+
+  <!-- Featured Apps Section -->
+  <section class="section" aria-labelledby="featured-heading">
+    <div class="section-header reveal">
+      <h2 class="section-title" id="featured-heading">Featured Applications</h2>
+      <p class="section-subtitle">A collection of our top-rated applications highlighting state-of-the-art AI tooling, productivity architectures, and gaming logic.</p>
+    </div>
+
+    <div class="grid-3">
+      <!-- App Card 1: Prompt to Pic -->
+      <div class="card app-card reveal">
+        <div class="app-icon-wrapper">
+          <img src="https://play-lh.googleusercontent.com/cd9hy1jroCDKnHfEF2fogCpCtKLsnGhpUxyK5nyoz-cpE88uxH5okR_Lk8t0DNhtDmJrJg8yHT38xuSeC38a=s256" alt="Prompt To Pic Logo" style="width: 48px; height: 48px; border-radius: var(--radius-md); object-fit: contain;">
+        </div>
+        <span class="app-card-category">AI Tools</span>
+        <h3 class="app-card-title">Prompt to Pic</h3>
+        <p class="app-card-desc">Generate beautiful AI art directly on your Android device. Driven by advanced text-to-image stable diffusion interfaces and Gemini AI prompt assistants.</p>
+        <div class="app-card-actions">
+          <a href="apps/prompt-to-pic-generator/index.html" class="btn btn-secondary">Learn More</a>
+          <a href="https://play.google.com/store/apps/details?id=com.prompttopic.generator.app" target="_blank" rel="noopener" class="btn btn-primary" aria-label="Get Prompt to Pic on Google Play">Get on Play Store</a>
+        </div>
+      </div>
+
+      <!-- App Card 2: Challenge Tracker -->
+      <div class="card app-card reveal">
+        <div class="app-icon-wrapper">
+          <img src="https://play-lh.googleusercontent.com/HMdv1YHFjCR6t2Uff96qZcWNc8eBJNDqZIVRRoLD8Y_fVey-8vsaC8OpAZTTKnZrXDeEuxdFsg0hv7KUl7Y4XQ=s256" alt="Challenges Logo" style="width: 48px; height: 48px; border-radius: var(--radius-md); object-fit: contain;">
+        </div>
+        <span class="app-card-category">Productivity</span>
+        <h3 class="app-card-title">Challenge Tracker</h3>
+        <p class="app-card-desc">Achieve goals, build habits, and track milestones. Features elegant Jetpack Compose graphs, Room Database offline persistence, and Material 3 layouts.</p>
+        <div class="app-card-actions">
+          <a href="apps/challenges-habit-tracker/index.html" class="btn btn-secondary">Learn More</a>
+          <a href="https://play.google.com/store/apps/details?id=app.challenge.tracker" target="_blank" rel="noopener" class="btn btn-primary" aria-label="Get Challenge Tracker on Google Play">Get on Play Store</a>
+        </div>
+      </div>
+
+      <!-- App Card 3: ArrowFlow: Escape Puzzle -->
+      <div class="card app-card reveal">
+        <div class="app-icon-wrapper">
+          <img src="https://play-lh.googleusercontent.com/7hBI74TA11YmAZJ_pX4BEWhrH-2qNMylBfZU5Adv16VDSyo6FyrR7Yvg-OG9F_BGl4dn7DgpLkQDpjXpLZjRdA=s256" alt="ArrowFlow Logo" style="width: 48px; height: 48px; border-radius: var(--radius-md); object-fit: contain;">
+        </div>
+        <span class="app-card-category">Mobile Games</span>
+        <h3 class="app-card-title">ArrowFlow</h3>
+        <p class="app-card-desc">Test your strategic thinking and reflex speed in this highly immersive physics game. Optimised for maximum frame rates and touch responsiveness.</p>
+        <div class="app-card-actions">
+          <a href="apps/arrowflow-escape-puzzle/index.html" class="btn btn-secondary">Learn More</a>
+          <a href="https://play.google.com/store/apps/details?id=game.original.arrow.escape.puzzle" target="_blank" rel="noopener" class="btn btn-primary" aria-label="Get ArrowFlow on Google Play">Get on Play Store</a>
+        </div>
+      </div>
+</div>
+  </section>
+
+  <!-- Categories Section -->
+  <section class="section" aria-labelledby="categories-heading">
+    <div class="section-header reveal">
+      <h2 class="section-title" id="categories-heading">App Categories</h2>
+      <p class="section-subtitle">We design and construct utility tools and digital services across multiple specialized Android app spaces.</p>
+    </div>
+
+    <div class="grid-4">
+      <div class="card reveal" style="text-align: center; padding: 1.5rem;">
+        <div style="font-size: 2rem; margin-bottom: 0.5rem;">🤖</div>
+        <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem;">AI Tools</h3>
+        <p style="font-size: 0.85rem;">Gemini integrations and local on-device smart tools.</p>
+      </div>
+      <div class="card reveal" style="text-align: center; padding: 1.5rem;">
+        <div style="font-size: 2rem; margin-bottom: 0.5rem;">📅</div>
+        <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem;">Productivity</h3>
+        <p style="font-size: 0.85rem;">Habit managers, schedules, offline databases, and widgets.</p>
+      </div>
+      <div class="card reveal" style="text-align: center; padding: 1.5rem;">
+        <div style="font-size: 2rem; margin-bottom: 0.5rem;">💳</div>
+        <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem;">Finance</h3>
+        <p style="font-size: 0.85rem;">Calculators, expense trackers, and interest simulators.</p>
+      </div>
+      <div class="card reveal" style="text-align: center; padding: 1.5rem;">
+        <div style="font-size: 2rem; margin-bottom: 0.5rem;">🎮</div>
+        <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem;">Mobile Games</h3>
+        <p style="font-size: 0.85rem;">Physics puzzles, arcade, strategy, and casual games.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="section" aria-labelledby="why-heading">
+    <div class="section-header reveal">
+      <h2 class="section-title" id="why-heading">Engineering Excellence</h2>
+      <p class="section-subtitle">Why our applications represent the pinnacle of professional Android engineering.</p>
+    </div>
+
+    <div class="grid-2">
+      <div class="feature-item reveal">
+        <div class="feature-icon-wrapper" aria-hidden="true">📱</div>
+        <div>
+          <h3 class="feature-title">Native Android Implementation</h3>
+          <p>We write 100% Kotlin code utilizing Jetpack Compose. No slow cross-platform layers, providing absolute native smoothness and zero resource overhead.</p>
+        </div>
+      </div>
+      <div class="feature-item reveal">
+        <div class="feature-icon-wrapper" aria-hidden="true">🎨</div>
+        <div>
+          <h3 class="feature-title">Material Design 3 Alignment</h3>
+          <p>Complete adoption of M3 standards. Elegant rounded corners, dynamic HSL colors, beautiful transitions, and dark theme support matching the system.</p>
+        </div>
+      </div>
+      <div class="feature-item reveal">
+        <div class="feature-icon-wrapper" aria-hidden="true">🔒</div>
+        <div>
+          <h3 class="feature-title">Privacy-First Architectures</h3>
+          <p>We believe in data minimization. Sensitive parameters are cached locally using encrypted Room Databases rather than synced to servers.</p>
+        </div>
+      </div>
+      <div class="feature-item reveal">
+        <div class="feature-icon-wrapper" aria-hidden="true">⚡</div>
+        <div>
+          <h3 class="feature-title">Optimised Performance</h3>
+          <p>Strict profiling for rendering cycles, coroutine-based thread management, memory optimization, and app-size reduction techniques (R8/ProGuard).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Statistics Counters -->
+  <section class="section" aria-labelledby="stats-heading">
+    <h2 id="stats-heading" class="visually-hidden" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0;">Our Performance Stats</h2>
+    <div class="stats-grid reveal">
+      <div class="grid-4">
+        <div>
+          <div class="stat-number" data-target="11" data-suffix="">0</div>
+          <div class="stat-label">Published Apps</div>
+        </div>
+        <div>
+          <div class="stat-number" data-target="1500" data-suffix="+">0</div>
+          <div class="stat-label">Active Installs</div>
+        </div>
+        <div>
+          <div class="stat-number" data-target="11" data-suffix="">0</div>
+          <div class="stat-label">Categories</div>
+        </div>
+        <div>
+          <div class="stat-number" data-target="150" data-suffix="+">0</div>
+          <div class="stat-label">Countries Reached</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technology Matrix -->
+  <section class="section" aria-labelledby="tech-heading">
+    <div class="section-header reveal">
+      <h2 class="section-title" id="tech-heading">Technology Ecosystem</h2>
+      <p class="section-subtitle">The tools and frameworks we leverage to compile highly performant, modular applications.</p>
+    </div>
+
+    <div class="grid-4" style="gap: 1rem;">
+      <div class="card reveal" style="padding: 1.25rem; display: flex; align-items: center; gap: 1rem;">
+        <span style="font-size: 1.5rem;">⚙️</span>
+        <span style="font-weight: 600;">Kotlin Multiplatform</span>
+      </div>
+      <div class="card reveal" style="padding: 1.25rem; display: flex; align-items: center; gap: 1rem;">
+        <span style="font-size: 1.5rem;">🏗️</span>
+        <span style="font-weight: 600;">Jetpack Compose</span>
+      </div>
+      <div class="card reveal" style="padding: 1.25rem; display: flex; align-items: center; gap: 1rem;">
+        <span style="font-size: 1.5rem;">🧠</span>
+        <span style="font-weight: 600;">Gemini AI API</span>
+      </div>
+      <div class="card reveal" style="padding: 1.25rem; display: flex; align-items: center; gap: 1rem;">
+        <span style="font-size: 1.5rem;">💾</span>
+        <span style="font-weight: 600;">Room DB Offline</span>
+      </div>
+      <div class="card reveal" style="padding: 1.25rem; display: flex; align-items: center; gap: 1rem;">
+        <span style="font-size: 1.5rem;">🔥</span>
+        <span style="font-weight: 600;">Firebase Platform</span>
+      </div>
+      <div class="card reveal" style="padding: 1.25rem; display: flex; align-items: center; gap: 1rem;">
+        <span style="font-size: 1.5rem;">⚡</span>
+        <span style="font-weight: 600;">Kotlin Coroutines</span>
+      </div>
+      <div class="card reveal" style="padding: 1.25rem; display: flex; align-items: center; gap: 1rem;">
+        <span style="font-size: 1.5rem;">📡</span>
+        <span style="font-weight: 600;">IoT</span>
+      </div>
+      <div class="card reveal" style="padding: 1.25rem; display: flex; align-items: center; gap: 1rem;">
+        <span style="font-size: 1.5rem;">🔌</span>
+        <span style="font-weight: 600;">BLE - Classic Bluetooth - Usb Serial</span>
+      </div>
+      <div class="card reveal" style="padding: 1.25rem; display: flex; align-items: center; gap: 1rem;">
+        <span style="font-size: 1.5rem;">🛠️</span>
+        <span style="font-weight: 600;">Material Design 3</span>
+      </div>
+      <div class="card reveal" style="padding: 1.25rem; display: flex; align-items: center; gap: 1rem;">
+        <span style="font-size: 1.5rem;">🥽</span>
+        <span style="font-weight: 600;">Android XR</span>
+      </div>
+      <div class="card reveal" style="padding: 1.25rem; display: flex; align-items: center; gap: 1rem;">
+        <span style="font-size: 1.5rem;">🌐</span>
+        <span style="font-weight: 600;">Ktor Network</span>
+      </div>
+      <div class="card reveal" style="padding: 1.25rem; display: flex; align-items: center; gap: 1rem;">
+        <span style="font-size: 1.5rem;">🤖</span>
+        <span style="font-weight: 600;">Koog Agent (AI framework)</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials (Infinite Scrolling) -->
+  <section class="section" aria-labelledby="testimonials-heading">
+    <div class="section-header reveal">
+      <h2 class="section-title" id="testimonials-heading">User Reviews &amp; Feedback</h2>
+      <p class="section-subtitle">Read feedback directly from Android users playing our mobile games and downloading our utility services.</p>
+    </div>
+
+    <div class="testimonials-scroller reveal">
+      <div class="testimonials-track">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card">
+          <div class="testimonial-rating" aria-label="5 star rating">★★★★★</div>
+          <p class="testimonial-quote">"Prompt to Pic has completely streamlined how I create social graphics. Super fast on my Pixel device!"</p>
+          <div class="testimonial-user">
+            <div class="testimonial-avatar" aria-hidden="true">JD</div>
+            <div>
+              <div class="testimonial-name">John Doe</div>
+              <div class="testimonial-role">Graphic Designer</div>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card">
+          <div class="testimonial-rating" aria-label="5 star rating">★★★★★</div>
+          <p class="testimonial-quote">"Challenge Tracker helped me maintain my workout targets. Room DB offline caching means I can use it anywhere."</p>
+          <div class="testimonial-user">
+            <div class="testimonial-avatar" aria-hidden="true">AM</div>
+            <div>
+              <div class="testimonial-name">Alice Miller</div>
+              <div class="testimonial-role">Fitness Coach</div>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card">
+          <div class="testimonial-rating" aria-label="5 star rating">★★★★★</div>
+          <p class="testimonial-quote">"Arrow Escape is my daily travel companion. Very responsive physics engine. Incredible design!"</p>
+          <div class="testimonial-user">
+            <div class="testimonial-avatar" aria-hidden="true">RK</div>
+            <div>
+              <div class="testimonial-name">Raj Kumar</div>
+              <div class="testimonial-role">Mobile Gamer</div>
+            </div>
+          </div>
+        </div>
+        <!-- Duplicate for loop seamless animation -->
+        <div class="testimonial-card">
+          <div class="testimonial-rating" aria-label="5 star rating">★★★★★</div>
+          <p class="testimonial-quote">"Prompt to Pic has completely streamlined how I create social graphics. Super fast on my Pixel device!"</p>
+          <div class="testimonial-user">
+            <div class="testimonial-avatar" aria-hidden="true">JD</div>
+            <div>
+              <div class="testimonial-name">John Doe</div>
+              <div class="testimonial-role">Graphic Designer</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-rating" aria-label="5 star rating">★★★★★</div>
+          <p class="testimonial-quote">"Challenge Tracker helped me maintain my workout targets. Room DB offline caching means I can use it anywhere."</p>
+          <div class="testimonial-user">
+            <div class="testimonial-avatar" aria-hidden="true">AM</div>
+            <div>
+              <div class="testimonial-name">Alice Miller</div>
+              <div class="testimonial-role">Fitness Coach</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-rating" aria-label="5 star rating">★★★★★</div>
+          <p class="testimonial-quote">"Arrow Escape is my daily travel companion. Very responsive physics engine. Incredible design!"</p>
+          <div class="testimonial-user">
+            <div class="testimonial-avatar" aria-hidden="true">RK</div>
+            <div>
+              <div class="testimonial-name">Raj Kumar</div>
+              <div class="testimonial-role">Mobile Gamer</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion -->
+  <section class="section" aria-labelledby="faq-heading">
+    <div class="section-header reveal">
+      <h2 class="section-title" id="faq-heading">Frequently Asked Questions</h2>
+      <p class="section-subtitle">Got questions? We've compiled quick answers to standard queries on downloads, safety, and system support.</p>
+    </div>
+
+    <div class="faq-accordion reveal">
+      <div class="faq-item">
+        <button class="faq-question">Are all of your applications hosted directly on the Google Play Store?<div class="faq-icon" aria-hidden="true"></div></button>
+        <div class="faq-answer">
+          <p>Yes. All of our production Android apps, tools, and games are fully audited, signed, and hosted safely on the official Google Play Store. You can find the full index link on our Apps catalog.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">How do your tools protect user data privacy?<div class="faq-icon" aria-hidden="true"></div></button>
+        <div class="faq-answer">
+          <p>We respect your privacy. Most of our tools use on-device SQLite databases via Room mapping to avoid transmitting private records online. Please check individual App Details pages for detailed permissions requirements and our dedicated Privacy Policy.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Do you support landscape orientation on foldables and tablets?<div class="faq-icon" aria-hidden="true"></div></button>
+        <div class="faq-answer">
+          <p>Absolutely. Our apps are built using Jetpack Compose dynamic sizing and adapt cleanly to varied form factors, including Android tablets, folding devices, and standard smartphones.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo-col">
+        <a href="index.html" class="logo" aria-label="AI Apps and Games footer home link">
+          <img src="assets/images/brand/logo.jpg" alt="AI Apps & Games Logo" class="logo-img" style="height: 32px; width: 32px; border-radius: var(--radius-sm); object-fit: contain; margin-right: 0.5rem;">
+          <span>AI Apps & Games</span>
+        </a>
+        <p class="footer-logo-desc">High-quality native Android experiences combining modern frameworks with cutting-edge AI architectures.</p>
+      </div>
+      <div>
+        <h3 class="footer-heading">Ecosystem</h3>
+        <ul class="footer-links">
+          <li><a href="apps.html" class="footer-link">Browse Apps</a></li>
+          <li><a href="about.html" class="footer-link">About Developer</a></li>
+          <li><a href="about.html#hire-me" class="footer-link">Hire Portfolio</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer-heading">Support & Legal</h3>
+        <ul class="footer-links">
+          <li><a href="support.html" class="footer-link">Contact Support</a></li>
+          <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
+          <li><a href="terms.html" class="footer-link">Terms & Conditions</a></li>
+          <li><a href="data-safety.html" class="footer-link">Data Safety Details</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer-heading">Developer Links</h3>
+        <ul class="footer-links">
+          <li><a href="https://play.google.com/store/apps/dev?id=6047869602587961523" target="_blank" rel="noopener" class="footer-link">Google Play Console</a></li>
+          <li><a href="app-ads.txt" class="footer-link">app-ads.txt</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>&copy; 2026 AI Apps & Games. All rights reserved.</div>
+      <div class="footer-socials">
+        <a href="https://play.google.com/store/apps/dev?id=6047869602587961523" class="footer-social-btn" aria-label="Google Play Store Account" target="_blank" rel="noopener">🎮</a>
+        <a href="https://github.com/kishorramani" class="footer-social-btn" aria-label="GitHub Account" target="_blank" rel="noopener">GH</a>
+        <a href="https://linkedin.com/" class="footer-social-btn" aria-label="LinkedIn Profile" target="_blank" rel="noopener">LN</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating UI Buttons -->
+  <div class="floating-actions" aria-hidden="true">
+    <button class="float-btn" id="back-to-top" title="Back to Top">↑</button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js" defer></script>
+  <script>
+    // Service Worker Registration
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js')
+          .then(reg => console.log('Service Worker registered successfully:', reg.scope))
+          .catch(err => console.log('Service Worker registration failed:', err));
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+# robots.txt for AI Apps & Games website
+# Google Play Developer Account: https://play.google.com/store/apps/dev?id=6047869602587961523
+
+User-agent: *
+Allow: /
+
+# Sitemap Location
+Sitemap: https://aiappsandgames.github.io/sitemap.xml

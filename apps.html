@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Browse Our Apps - AI Apps & Games</title>
+  <meta name="description" content="Discover the collection of tools, productivity assistants, calculators, education courses, and mobile games developed by AI Apps & Games for Android.">
+  <link rel="canonical" href="https://aiappsandgames.github.io/apps.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aiappsandgames.github.io/apps.html">
+  <meta property="og:title" content="Browse Our Apps - AI Apps & Games">
+  <meta property="og:description" content="Discover the collection of tools, productivity assistants, calculators, education courses, and mobile games developed by AI Apps & Games for Android.">
+  <meta property="og:image" content="https://aiappsandgames.github.io/assets/images/brand/og-image.png">
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Android Applications Catalog",
+    "description": "Catalog of mobile applications developed by AI Apps & Games on Google Play.",
+    "url": "https://aiappsandgames.github.io/apps.html"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container">
+      <a href="index.html" class="logo" aria-label="AI Apps and Games Home">
+        <img src="assets/images/brand/logo.jpg" alt="AI Apps & Games Logo" class="logo-img" style="height: 32px; width: 32px; border-radius: var(--radius-sm); object-fit: contain; margin-right: 0.5rem;">
+        <span>AI Apps & Games</span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="apps.html" class="nav-link active">Apps</a>
+        <a href="about.html" class="nav-link">About & Hire</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="support.html" class="nav-link">Support</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn-icon theme-toggle" id="theme-toggle" aria-label="Toggle light or dark theme">
+          <svg class="dark-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="light-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="display: none;">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Open Mobile Menu" aria-expanded="false" aria-controls="nav-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="section" style="padding-top: 8rem; padding-bottom: 2rem;">
+    <div class="section-header reveal">
+      <h1 class="section-title">Explore Applications</h1>
+      <p class="section-subtitle">Search, filter, and discover our premium applications compiled specifically for Android smartphones, foldables, and tablets.</p>
+    </div>
+  </section>
+
+  <!-- Search & Filter Controls -->
+  <section class="section" style="padding-top: 0; padding-bottom: 2rem;">
+    <div class="search-container reveal">
+      <div class="search-input-wrapper">
+        <span class="search-icon" aria-hidden="true">🔍</span>
+        <input type="text" id="app-search" class="search-field" placeholder="Search by name or keyword..." oninput="filterApps()" aria-label="Search applications">
+      </div>
+    </div>
+
+    <div class="filter-controls reveal">
+      <div class="categories-scroll" role="tablist" aria-label="Filter by Category">
+        <button class="chip active" data-category="all" role="tab" aria-selected="true" onclick="document.querySelectorAll('.chip').forEach(c => c.classList.remove('active')); this.classList.add('active'); filterApps();">All Categories</button>
+        <button class="chip" data-category="ai" role="tab" aria-selected="false" onclick="document.querySelectorAll('.chip').forEach(c => c.classList.remove('active')); this.classList.add('active'); filterApps();">AI Tools</button>
+        <button class="chip" data-category="productivity" role="tab" aria-selected="false" onclick="document.querySelectorAll('.chip').forEach(c => c.classList.remove('active')); this.classList.add('active'); filterApps();">Productivity</button>
+        <button class="chip" data-category="finance" role="tab" aria-selected="false" onclick="document.querySelectorAll('.chip').forEach(c => c.classList.remove('active')); this.classList.add('active'); filterApps();">Finance</button>
+        <button class="chip" data-category="games" role="tab" aria-selected="false" onclick="document.querySelectorAll('.chip').forEach(c => c.classList.remove('active')); this.classList.add('active'); filterApps();">Games</button>
+        <button class="chip" data-category="education" role="tab" aria-selected="false" onclick="document.querySelectorAll('.chip').forEach(c => c.classList.remove('active')); this.classList.add('active'); filterApps();">Education</button>
+        <button class="chip" data-category="utilities" role="tab" aria-selected="false" onclick="document.querySelectorAll('.chip').forEach(c => c.classList.remove('active')); this.classList.add('active'); filterApps();">Utilities</button>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <label for="app-sort" style="font-weight: 500; font-size: 0.95rem; color: var(--text-secondary);">Sort By:</label>
+        <select id="app-sort" class="sort-select" onchange="filterApps()" aria-label="Sort applications">
+          <option value="popular">Popularity</option>
+          <option value="name">Name (A-Z)</option>
+        </select>
+      </div>
+    </div>
+  </section>
+
+  <!-- Apps Grid -->
+  <section class="section" style="padding-top: 0;">
+    <div class="grid-3 app-grid">
+      <!-- Card 1: Prompt To Pic Generator -->
+      <div class="card app-card" data-category="ai" data-order="1">
+        <div class="app-icon-wrapper">
+          <img src="https://play-lh.googleusercontent.com/cd9hy1jroCDKnHfEF2fogCpCtKLsnGhpUxyK5nyoz-cpE88uxH5okR_Lk8t0DNhtDmJrJg8yHT38xuSeC38a=s256" alt="Prompt To Pic Generator Logo" style="width: 48px; height: 48px; border-radius: var(--radius-md); object-fit: contain;">
+        </div>
+        <span class="app-card-category">AI Tools</span>
+        <h2 class="app-card-title">Prompt To Pic Generator</h2>
+        <p class="app-card-desc">Generate beautiful AI art directly on your Android device. Driven by advanced text-to-image stable diffusion interfaces and Gemini AI prompt assistants.</p>
+        <div class="app-card-actions">
+          <a href="apps/prompt-to-pic-generator/index.html" class="btn btn-secondary">Details</a>
+          <a href="https://play.google.com/store/apps/details?id=com.prompttopic.generator.app" target="_blank" rel="noopener" class="btn btn-primary" aria-label="Get Prompt To Pic Generator on Google Play">Get on Play</a>
+        </div>
+      </div>
+      <!-- Card 2: AIVids - 4k AI Video Player -->
+      <div class="card app-card" data-category="utilities" data-order="2">
+        <div class="app-icon-wrapper">
+          <img src="https://play-lh.googleusercontent.com/fkGXzUY27RcUct79XFsZdyEa4Y6ZpsXDIK46vMMQfyk55SVTD_e644ECZRJnXGN-2AZL1AXVAAD1WO-GRV-4Jg=s256" alt="AIVids - 4k AI Video Player Logo" style="width: 48px; height: 48px; border-radius: var(--radius-md); object-fit: contain;">
+        </div>
+        <span class="app-card-category">Utilities</span>
+        <h2 class="app-card-title">AIVids - 4k AI Video Player</h2>
+        <p class="app-card-desc">Play 4K Ultra HD video files smoothly and apply real-time enhancement filters for the ultimate high-fidelity mobile viewing experience.</p>
+        <div class="app-card-actions">
+          <a href="apps/aivids-4k-ai-video-player/index.html" class="btn btn-secondary">Details</a>
+          <a href="https://play.google.com/store/apps/details?id=com.xvideo.player" target="_blank" rel="noopener" class="btn btn-primary" aria-label="Get AIVids - 4k AI Video Player on Google Play">Get on Play</a>
+        </div>
+      </div>
+      <!-- Card 3: Challenges: Habit Tracker -->
+      <div class="card app-card" data-category="productivity" data-order="3">
+        <div class="app-icon-wrapper">
+          <img src="https://play-lh.googleusercontent.com/HMdv1YHFjCR6t2Uff96qZcWNc8eBJNDqZIVRRoLD8Y_fVey-8vsaC8OpAZTTKnZrXDeEuxdFsg0hv7KUl7Y4XQ=s256" alt="Challenges: Habit Tracker Logo" style="width: 48px; height: 48px; border-radius: var(--radius-md); object-fit: contain;">
+        </div>
+        <span class="app-card-category">Productivity</span>
+        <h2 class="app-card-title">Challenges: Habit Tracker</h2>
+        <p class="app-card-desc">Track and build positive life habits with customizable streaks, milestones, Jetpack Compose layouts, and offline Room DB storage support.</p>
+        <div class="app-card-actions">
+          <a href="apps/challenges-habit-tracker/index.html" class="btn btn-secondary">Details</a>
+          <a href="https://play.google.com/store/apps/details?id=app.challenge.tracker" target="_blank" rel="noopener" class="btn btn-primary" aria-label="Get Challenges: Habit Tracker on Google Play">Get on Play</a>
+        </div>
+      </div>
+      <!-- Card 4: AssistMate - AI Friend -->
+      <div class="card app-card" data-category="utilities" data-order="4">
+        <div class="app-icon-wrapper">
+          <img src="https://play-lh.googleusercontent.com/PRc9ShmnVmicoOVF1YVAowcSLzzTHYL_1vtBAbOgBFS31x_KMIoLFhM03Vb5hwjOzUP_CaOmNfr0ni0Y-RKAVG8=s256" alt="AssistMate - AI Friend Logo" style="width: 48px; height: 48px; border-radius: var(--radius-md); object-fit: contain;">
+        </div>
+        <span class="app-card-category">Utilities</span>
+        <h2 class="app-card-title">AssistMate - AI Friend</h2>
+        <p class="app-card-desc">Your voice-activated daily assistant. Handles schedule reminders, voice notes transcripts, and smart commands natively on your Android system.</p>
+        <div class="app-card-actions">
+          <a href="apps/assistmate-ai-friend/index.html" class="btn btn-secondary">Details</a>
+          <a href="https://play.google.com/store/apps/details?id=com.assistmate" target="_blank" rel="noopener" class="btn btn-primary" aria-label="Get AssistMate - AI Friend on Google Play">Get on Play</a>
+        </div>
+      </div>
+      <!-- Card 5: ArrowFlow: Escape Puzzle -->
+      <div class="card app-card" data-category="games" data-order="5">
+        <div class="app-icon-wrapper">
+          <img src="https://play-lh.googleusercontent.com/7hBI74TA11YmAZJ_pX4BEWhrH-2qNMylBfZU5Adv16VDSyo6FyrR7Yvg-OG9F_BGl4dn7DgpLkQDpjXpLZjRdA=s256" alt="ArrowFlow: Escape Puzzle Logo" style="width: 48px; height: 48px; border-radius: var(--radius-md); object-fit: contain;">
+        </div>
+        <span class="app-card-category">Games</span>
+        <h2 class="app-card-title">ArrowFlow: Escape Puzzle</h2>
+        <p class="app-card-desc">Navigate arrows through direction blockers and clear the grid to solve challenging physics puzzles. Highly addicting spatial gameplay.</p>
+        <div class="app-card-actions">
+          <a href="apps/arrowflow-escape-puzzle/index.html" class="btn btn-secondary">Details</a>
+          <a href="https://play.google.com/store/apps/details?id=game.original.arrow.escape.puzzle" target="_blank" rel="noopener" class="btn btn-primary" aria-label="Get ArrowFlow: Escape Puzzle on Google Play">Get on Play</a>
+        </div>
+      </div>
+      <!-- Card 6: File Transfer - Sharing -->
+      <div class="card app-card" data-category="utilities" data-order="6">
+        <div class="app-icon-wrapper">
+          <img src="https://play-lh.googleusercontent.com/x7vsdGm_FY-xyF4JHC1vGBr7jzJrSMr-0w4sYcIVEFJB2PtVND3TNcN0Nn-vMXScS0XF6_AJ3UKL9xmfx_WPy1c=s256" alt="File Transfer - Sharing Logo" style="width: 48px; height: 48px; border-radius: var(--radius-md); object-fit: contain;">
+        </div>
+        <span class="app-card-category">Utilities</span>
+        <h2 class="app-card-title">File Transfer - Sharing</h2>
+        <p class="app-card-desc">High-speed peer-to-peer file transfer over Wi-Fi Direct. Zero internet usage, completely decentralized, and secure transfer encryption.</p>
+        <div class="app-card-actions">
+          <a href="apps/file-transfer-sharing/index.html" class="btn btn-secondary">Details</a>
+          <a href="https://play.google.com/store/apps/details?id=com.file.transfer.sharing" target="_blank" rel="noopener" class="btn btn-primary" aria-label="Get File Transfer - Sharing on Google Play">Get on Play</a>
+        </div>
+      </div>
+      <!-- Card 7: Fyntric: Finance Calculator -->
+      <div class="card app-card" data-category="finance" data-order="7">
+        <div class="app-icon-wrapper">
+          <img src="https://play-lh.googleusercontent.com/DrMJyYJ1YwLzhwzkR74ZhzHJbcUa4Fit3DGO7pBkXXcNd9cRgj8qFfnHiRtEguczed_9drDr9V7O7hiFozMs=s256" alt="Fyntric: Finance Calculator Logo" style="width: 48px; height: 48px; border-radius: var(--radius-md); object-fit: contain;">
+        </div>
+        <span class="app-card-category">Finance</span>
+        <h2 class="app-card-title">Fyntric: Finance Calculator</h2>
+        <p class="app-card-desc">Calculate loans, deposits, compound interest, and tax structures instantly. Export clean amortization breakdown charts to PDF files.</p>
+        <div class="app-card-actions">
+          <a href="apps/fyntric-finance-calculator/index.html" class="btn btn-secondary">Details</a>
+          <a href="https://play.google.com/store/apps/details?id=com.fyntric.financecalculator" target="_blank" rel="noopener" class="btn btn-primary" aria-label="Get Fyntric: Finance Calculator on Google Play">Get on Play</a>
+        </div>
+      </div>
+      <!-- Card 8: Bhagavad Gita Summary -->
+      <div class="card app-card" data-category="education" data-order="8">
+        <div class="app-icon-wrapper">
+          <img src="https://play-lh.googleusercontent.com/0wgS4NWJtlcJ5tgwLYcK7f5lL8GWlBqFuPbUNyYCkTlI1O_uhdVOf6Hnyg1pdL_fwaeMQf9Nys6s0sKPxQv0=s256" alt="Bhagavad Gita Summary Logo" style="width: 48px; height: 48px; border-radius: var(--radius-md); object-fit: contain;">
+        </div>
+        <span class="app-card-category">Education</span>
+        <h2 class="app-card-title">Bhagavad Gita Summary</h2>
+        <p class="app-card-desc">Daily summaries, Sanskrit verses, English translations, and detailed sloka commentary. Full offline compatibility and widget support.</p>
+        <div class="app-card-actions">
+          <a href="apps/bhagavad-gita-summary/index.html" class="btn btn-secondary">Details</a>
+          <a href="https://play.google.com/store/apps/details?id=com.bhagavadgita.summary" target="_blank" rel="noopener" class="btn btn-primary" aria-label="Get Bhagavad Gita Summary on Google Play">Get on Play</a>
+        </div>
+      </div>
+      <!-- Card 9: AI Data Recovery: Recover file -->
+      <div class="card app-card" data-category="utilities" data-order="9">
+        <div class="app-icon-wrapper">
+          <img src="https://play-lh.googleusercontent.com/8fAQD85Tl8RJMAPoLM8oLaV3NZdYZko553xT5uhzOwW-XUkaEOm_tVUtJq4jIVjbrC4u2hWBMQM8h1qc_Ha-SQ=s256" alt="AI Data Recovery: Recover file Logo" style="width: 48px; height: 48px; border-radius: var(--radius-md); object-fit: contain;">
+        </div>
+        <span class="app-card-category">Utilities</span>
+        <h2 class="app-card-title">AI Data Recovery: Recover file</h2>
+        <p class="app-card-desc">Deep scan caches and device filesystems to restore accidentally deleted images, videos, audio clips, and documents in a single click.</p>
+        <div class="app-card-actions">
+          <a href="apps/ai-data-recovery-recover-file/index.html" class="btn btn-secondary">Details</a>
+          <a href="https://play.google.com/store/apps/details?id=com.data.recovery.photo.video.file.audio.restore.disk.scan" target="_blank" rel="noopener" class="btn btn-primary" aria-label="Get AI Data Recovery: Recover file on Google Play">Get on Play</a>
+        </div>
+      </div>
+      <!-- Card 10: Motiverse -->
+      <div class="card app-card" data-category="utilities" data-order="10">
+        <div class="app-icon-wrapper">
+          <img src="https://play-lh.googleusercontent.com/c4l0SqNHUvsPz9m-f1uwKzZ-uG7pHkbLqdOrmqaJz2UhQI14X18-G_mEg5nWKbfvBSTu1yxX9nPBcYg3Q2wQIiE=s256" alt="Motiverse Logo" style="width: 48px; height: 48px; border-radius: var(--radius-md); object-fit: contain;">
+        </div>
+        <span class="app-card-category">Utilities</span>
+        <h2 class="app-card-title">Motiverse</h2>
+        <p class="app-card-desc">Maintain a positive mindset with daily motivational quotes, custom cards creator, morning notifications, and lock-screen widgets.</p>
+        <div class="app-card-actions">
+          <a href="apps/motiverse/index.html" class="btn btn-secondary">Details</a>
+          <a href="https://play.google.com/store/apps/details?id=com.motiverse365.dayquote" target="_blank" rel="noopener" class="btn btn-primary" aria-label="Get Motiverse on Google Play">Get on Play</a>
+        </div>
+      </div>
+      <!-- Card 11: OnePlace - daily productivity -->
+      <div class="card app-card" data-category="productivity" data-order="11">
+        <div class="app-icon-wrapper">
+          <img src="assets/images/apps/oneplace-icon.jpg" alt="OnePlace - daily productivity Logo" style="width: 48px; height: 48px; border-radius: var(--radius-md); object-fit: contain;">
+        </div>
+        <span class="app-card-category">Productivity</span>
+        <h2 class="app-card-title">OnePlace - daily productivity</h2>
+        <p class="app-card-desc">Keep your notes, routines, events, checklists, and billing targets in one place. Completely private local storage cache for high performance.</p>
+        <div class="app-card-actions">
+          <a href="apps/oneplace-daily-productivity/index.html" class="btn btn-secondary">Details</a>
+          <a href="https://play.google.com/store/apps/details?id=com.oneplace.daily.productivity" target="_blank" rel="noopener" class="btn btn-primary" aria-label="Get OnePlace - daily productivity on Google Play">Get on Play</a>
+        </div>
+      </div>
+
+</div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo-col">
+        <a href="index.html" class="logo" aria-label="AI Apps and Games footer home link">
+          <img src="assets/images/brand/logo.jpg" alt="AI Apps & Games Logo" class="logo-img" style="height: 32px; width: 32px; border-radius: var(--radius-sm); object-fit: contain; margin-right: 0.5rem;">
+          <span>AI Apps & Games</span>
+        </a>
+        <p class="footer-logo-desc">High-quality native Android experiences combining modern frameworks with cutting-edge AI architectures.</p>
+      </div>
+      <div>
+        <h3 class="footer-heading">Ecosystem</h3>
+        <ul class="footer-links">
+          <li><a href="apps.html" class="footer-link">Browse Apps</a></li>
+          <li><a href="about.html" class="footer-link">About Developer</a></li>
+          <li><a href="about.html#hire-me" class="footer-link">Hire Portfolio</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer-heading">Support & Legal</h3>
+        <ul class="footer-links">
+          <li><a href="support.html" class="footer-link">Contact Support</a></li>
+          <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
+          <li><a href="terms.html" class="footer-link">Terms & Conditions</a></li>
+          <li><a href="data-safety.html" class="footer-link">Data Safety Details</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer-heading">Developer Links</h3>
+        <ul class="footer-links">
+          <li><a href="https://play.google.com/store/apps/dev?id=6047869602587961523" target="_blank" rel="noopener" class="footer-link">Google Play Console</a></li>
+          <li><a href="app-ads.txt" class="footer-link">app-ads.txt</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>&copy; 2026 AI Apps & Games. All rights reserved.</div>
+      <div class="footer-socials">
+        <a href="https://play.google.com/store/apps/dev?id=6047869602587961523" class="footer-social-btn" aria-label="Google Play Store Account" target="_blank" rel="noopener">🎮</a>
+        <a href="https://github.com/kishorramani" class="footer-social-btn" aria-label="GitHub Account" target="_blank" rel="noopener">GH</a>
+        <a href="https://linkedin.com/" class="footer-social-btn" aria-label="LinkedIn Profile" target="_blank" rel="noopener">LN</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
